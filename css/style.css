@@ -1,0 +1,83 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.margem{
+    width: 600px;
+    height: 100px;
+    background-color: lightslategrey;
+    border: 1px solid;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.margem input{
+    height: 30px;
+    width: 150px;
+    border-radius: 5px;
+}
+
+
+#faleconosco{
+    width: 700px;
+    height: 250px;
+    margin:70px auto;
+}
+
+#faleconosco h1{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#faleconosco h2{
+    text-align: center;
+    border-bottom: 1px solid #C0C0C0;
+    color: #4F4F4F;
+}
+
+.tablebox{
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+.boxcontatos1{
+    margin-top: 20px;
+    width: 300px;
+    height: 120px;
+    float: left;
+    border: 1px solid #C0C0C0;
+    text-decoration: none;
+    border-radius: 3px;
+    color: #000;
+}
+
+.boxcontatos2{
+    margin-top: 20px;
+    color: #000;
+    width: 300px;
+    height: 120px;
+    float: right;
+    border: 1px solid #C0C0C0;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+#localizacao{
+    width: 950px;
+    margin: 0 auto;
+    border: 1px solid #C0C0C0;
+    border-radius: 5px;
+}
+
+#localizacao h1{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-bottom:1px solid #C0C0C0;
+    margin-bottom: 10px;
+}
