@@ -26,3 +26,4 @@ valor.addEventListener("keyup", (event) => {
 parcela.addEventListener("keyup", (event) => {
     valor.disabled = parcela.value.trim().length > 0
 })
+

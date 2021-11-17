@@ -50,6 +50,15 @@
             $_SESSION['p24'] = $valorok * $dados['co24'];
             $_SESSION['p12'] = $valorok * $dados['co12'];
 
+            $_SESSION['taxa84'] = $dados['taxa84'];
+            $_SESSION['taxa72'] = $dados['taxa72'];
+            $_SESSION['taxa60'] = $dados['taxa60'];
+            $_SESSION['taxa48'] = $dados['taxa48'];
+            $_SESSION['taxa36'] = $dados['taxa36'];
+            $_SESSION['taxa24'] = $dados['taxa24'];
+            $_SESSION['taxa12'] = $dados['taxa12'];
+
+
             
                 $_SESSION['cms84'] = $valorok * $dados['cms84'];
                 $_SESSION['cms72'] = $valorok * $dados['cms72'];
@@ -74,6 +83,14 @@
             $_SESSION['valor36'] = $parcelaok / $dados['co36'];
             $_SESSION['valor24'] = $parcelaok / $dados['co24'];
             $_SESSION['valor12'] = $parcelaok / $dados['co12'];
+
+            $_SESSION['taxa84'] = $dados['taxa84'];
+            $_SESSION['taxa72'] = $dados['taxa72'];
+            $_SESSION['taxa60'] = $dados['taxa60'];
+            $_SESSION['taxa48'] = $dados['taxa48'];
+            $_SESSION['taxa36'] = $dados['taxa36'];
+            $_SESSION['taxa24'] = $dados['taxa24'];
+            $_SESSION['taxa12'] = $dados['taxa12'];
 
             
                 $_SESSION['cms84'] = $_SESSION['valor84'] * $dados['cms84'];

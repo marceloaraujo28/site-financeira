@@ -110,7 +110,8 @@ session_start();
                                             echo "<th scope='col'>VALOR</th>";
                                             echo "<th scope='col'>PRAZO</th>";
                                             echo "<th scope='col'>PARCELA</th>";
-                                            echo "<th scope='col'>CMS</th>";
+                                            echo "<th scope='col'>JUROS%</th>";
+                                            echo "<th scope='col'>CMS  <button type='button' onclick='ocultarcampo()' style='background: transparent; margin-left: 4px; border: none;'><img src='../img/olho.svg' style='width: 20px; height: 20px;'></button></th>";
                                         echo "</tr>";
                                     echo "</thead>";
                                     echo "<tbody>";
@@ -118,49 +119,56 @@ session_start();
                                             echo "<th scope='col'>R$ ".number_format($_SESSION['valor84'],2,",",".");"</th>";unset($_SESSION['valor84']);
                                             echo "<th scope='col'>84x</th>";
                                             echo "<th scope='col'>R$ ".number_format($_SESSION['p84'],2,",",".");"</th>";unset($_SESSION['p84']);
-                                            echo "<th scope='col'>R$ ".number_format($_SESSION['cms84'],2,",",".");"</th>";unset($_SESSION['cms84']);
+                                            echo "<th scope='col'>".number_format($_SESSION['taxa84'],2,",",".");"</th>";unset($_SESSION['taxa84']);
+                                            echo "<th scope='col'><span class='ocultar'>R$ ".number_format($_SESSION['cms84'],2,",",".");"</span></th>";unset($_SESSION['cms84']);
                                         echo "</tr>";
 
                                         echo "<tr>";
                                             echo "<th scope='col'>R$ ".number_format($_SESSION['valor72'],2,",",".");"</th>";unset($_SESSION['valor72']);
                                             echo "<th scope='col'>72x</th>";
                                             echo "<th scope='col'>R$ ".number_format($_SESSION['p72'],2,",",".");"</th>";unset($_SESSION['p72']);
-                                            echo "<th scope='col'>R$ ".number_format($_SESSION['cms72'],2,",",".");"</th>";unset($_SESSION['cms72']);
+                                            echo "<th scope='col'>".number_format($_SESSION['taxa72'],2,",",".");"</th>";unset($_SESSION['taxa72']);
+                                            echo "<th scope='col'><span class='ocultar'>R$ ".number_format($_SESSION['cms72'],2,",",".");"</span></th>";unset($_SESSION['cms72']);
                                         echo "</tr>";
 
                                         echo "<tr>";
                                             echo "<th scope='col'>R$ ".number_format($_SESSION['valor60'],2,",",".");"</th>";unset($_SESSION['valor60']);
                                             echo "<th scope='col'>60x</th>";
                                             echo "<th scope='col'>R$ ".number_format($_SESSION['p60'],2,",",".");"</th>";unset($_SESSION['p60']);
-                                            echo "<th scope='col'>R$ ".number_format($_SESSION['cms60'],2,",",".");"</th>";unset($_SESSION['cms60']);
+                                            echo "<th scope='col'>".number_format($_SESSION['taxa60'],2,",",".");"</th>";unset($_SESSION['taxa60']);
+                                            echo "<th scope='col'><span class='ocultar'>R$ ".number_format($_SESSION['cms60'],2,",",".");"</span></th>";unset($_SESSION['cms60']);
                                         echo "</tr>";
                                         
                                         echo "<tr>";
                                             echo "<th scope='col'>R$ ".number_format($_SESSION['valor48'],2,",",".");"</th>";unset($_SESSION['valor48']);
                                             echo "<th scope='col'>48x</th>";
                                             echo "<th scope='col'>R$ ".number_format($_SESSION['p48'],2,",",".");"</th>";unset($_SESSION['p48']);
-                                            echo "<th scope='col'>R$ ".number_format($_SESSION['cms48'],2,",",".");"</th>";unset($_SESSION['cms48']);
+                                            echo "<th scope='col'>".number_format($_SESSION['taxa48'],2,",",".");"</th>";unset($_SESSION['taxa48']);
+                                            echo "<th scope='col'><span class='ocultar'>R$ ".number_format($_SESSION['cms48'],2,",",".");"</span></th>";unset($_SESSION['cms48']);
                                         echo "</tr>";
 
                                         echo "<tr>";
                                             echo "<th scope='col'>R$ ".number_format($_SESSION['valor36'],2,",",".");"</th>";unset($_SESSION['valor36']);
                                             echo "<th scope='col'>36x</th>";
                                             echo "<th scope='col'>R$ ".number_format($_SESSION['p36'],2,",",".");"</th>";unset($_SESSION['p36']);
-                                            echo "<th scope='col'>R$ ".number_format($_SESSION['cms36'],2,",",".");"</th>";unset($_SESSION['cms36']);
+                                            echo "<th scope='col'>".number_format($_SESSION['taxa36'],2,",",".");"</th>";unset($_SESSION['taxa36']);
+                                            echo "<th scope='col' class='ocultar'>R$ ".number_format($_SESSION['cms36'],2,",",".");"</span></th>";unset($_SESSION['cms36']);
                                         echo "</tr>";
 
                                         echo "<tr>";
                                             echo "<th scope='col'>R$ ".number_format($_SESSION['valor24'],2,",",".");"</th>";unset($_SESSION['valor24']);
                                             echo "<th scope='col'>24x</th>";
                                             echo "<th scope='col'>R$ ".number_format($_SESSION['p24'],2,",",".");"</th>";unset($_SESSION['p24']);
-                                            echo "<th scope='col'>R$ ".number_format($_SESSION['cms24'],2,",",".");"</th>";unset($_SESSION['cms24']);
+                                            echo "<th scope='col'>".number_format($_SESSION['taxa24'],2,",",".");"</th>";unset($_SESSION['taxa24']);
+                                            echo "<th scope='col'><span class='ocultar'>R$ ".number_format($_SESSION['cms24'],2,",",".");"</span></th>";unset($_SESSION['cms24']);
                                         echo "</tr>";
 
                                         echo "<tr>";
                                             echo "<th scope='col'>R$ ".number_format($_SESSION['valor12'],2,",",".");"</th>";unset($_SESSION['valor12']);
                                             echo "<th scope='col'>12x</th>";
                                             echo "<th scope='col'>R$ ".number_format($_SESSION['p12'],2,",",".");"</th>";unset($_SESSION['p12']);
-                                            echo "<th scope='col'>R$ ".number_format($_SESSION['cms12'],2,",",".");"</th>";unset($_SESSION['cms12']);
+                                            echo "<th scope='col'>".number_format($_SESSION['taxa12'],2,",",".");"</th>";unset($_SESSION['taxa12']);
+                                            echo "<th scope='col'><span class='ocultar'>R$ ".number_format($_SESSION['cms12'],2,",",".");"</span></th>";unset($_SESSION['cms12']);
                                         echo "</tr>";
                                     echo "</tbody>";
                                 echo "</table>";
@@ -176,7 +184,21 @@ session_start();
         </div>
             
     </div>
-
+    <script >
+        function ocultarcampo(){
+            var trcms = document.getElementsByClassName("ocultar");
+ 
+            for(let i = 0; i < trcms.length; i++){
+                if(trcms[i].style.display == "none"){
+                    trcms[i].style.display = "block";
+                }else{
+                    trcms[i].style.display = "none";
+                    
+                }
+                
+            }
+        }
+    </script>
 
 </body>
 </html>
