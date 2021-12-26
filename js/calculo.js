@@ -5,7 +5,7 @@ var resultado
 
 campo1.addEventListener("keyup", (event) => {
     var clean = event.target.value.replace(/[^0-9,]*/g, '').replace(',', '.')
-    resultado = clean * 0.3
+    resultado = clean * 0.35
     campo3.value = resultado.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
 
 })

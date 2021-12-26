@@ -81,7 +81,7 @@ session_start();
                             <div class="card-header text-center">
                                 <b>Parcelas</b>
                             </div>
-                            <div class="card-body float-left w-100">
+                            <div class="card-body btn-parcelas float-left w-100">
 
                                     <div class="form-group col-8 d-flex container justify-content-between">
                                         <label class="form-check-label mr-2" for="cl_1"><b>Valor:</b></label>
@@ -106,7 +106,7 @@ session_start();
                                 echo "<div class='container col-8'>";
                                 echo "<table class='table'>";
                                     echo "<thead>";
-                                        echo "<tr>";
+                                        echo "<tr class='color-table'>";
                                             echo "<th scope='col'>VALOR</th>";
                                             echo "<th scope='col'>PRAZO</th>";
                                             echo "<th scope='col'>PARCELA</th>";

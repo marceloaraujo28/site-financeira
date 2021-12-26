@@ -6,14 +6,18 @@
 .margem{
     width: 600px;
     height: 100px;
-    background-color: lightslategrey;
-    border: 1px solid;
+    border: 1px solid #fa8c5c;
     border-radius: 5px;
     margin: 0 auto;
     margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #fa8c5c;
+}
+
+.ocultar{
+    display:none;
 }
 
 
@@ -21,6 +25,7 @@
     height: 30px;
     width: 150px;
     border-radius: 5px;
+    border-color: #fa8c5c;
 }
 
 
@@ -33,12 +38,14 @@
 #faleconosco h1{
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fa8c5c;
 }
 
 #faleconosco h2{
     text-align: center;
     border-bottom: 1px solid #C0C0C0;
-    color: #4F4F4F;
+    color: #fa8c5c;
+    border-color: #fa8c5c;
 }
 
 .tablebox{
@@ -55,6 +62,7 @@
     text-decoration: none;
     border-radius: 3px;
     color: #000;
+    border-color: #fa8c5c;
 }
 
 .boxcontatos2{
@@ -73,6 +81,7 @@
     margin: 0 auto;
     border: 1px solid #C0C0C0;
     border-radius: 5px;
+    border-color: #fa8c5c;
 }
 
 #localizacao h1{
@@ -80,4 +89,37 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     border-bottom:1px solid #C0C0C0;
     margin-bottom: 10px;
+    color: #fa8c5c;
+    border-color: #fa8c5c;
+}
+
+.card-header{
+    color: #fa8c5c;
+}
+
+.card{
+    border-color: #fa8c5c;
+}
+
+.form-check-label{
+    color: #fa8c5c;
+}
+
+.btn-primary{
+    color: white;
+    background-color: #fa8c5c;
+    border-color: black;
+}
+
+.table{
+    border-color: #fa8c5c;
+}
+
+.color-table{
+    color: #fa8c5c;
+}
+
+.btn-parcelas button{
+    background-color: #fa8c5c;
+    border-color: black;
 }

@@ -120,7 +120,7 @@
                                 echo "<div class='container col-8'>";
                                 echo "<table class='table'>";
                                     echo "<thead>";
-                                        echo "<tr>";
+                                        echo "<tr class='color-table'>";
                                             echo "<th scope='col'>VALOR</th>";
                                             echo "<th scope='col'>PRAZO</th>";
                                             echo "<th scope='col'>PARCELA</th>";
@@ -147,7 +147,7 @@
                                             
                                         echo "</tr>";
                                         
-                                        echo "<tr>";
+                                        echo "<tr> ";
                                             echo "<th scope='col'>R$ ".number_format($_SESSION['valor48'],2,",",".");"</th>";unset($_SESSION['valor48']);
                                             echo "<th scope='col'>48x</th>";
                                             echo "<th scope='col'>R$ ".number_format($_SESSION['p48'],2,",",".");"</th>";unset($_SESSION['p48']);
@@ -181,7 +181,7 @@
                                 echo "<div class='container col-8'>";
                                 echo "<table class='table'>";
                                     echo "<thead>";
-                                        echo "<tr>";
+                                        echo "<tr class='color-table'>";
                                             echo "<th scope='col'>VALOR</th>";
                                             echo "<th scope='col'>PRAZO</th>";
                                             echo "<th scope='col'>PARCELA</th>";
